@@ -15,161 +15,27 @@
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+
 </head>
 
-<body>
-
-    <div id="wrapper">
+<body style="height:100vh; background-image:url(images/background.jpg); background-size: cover">
+    <div id="wrapper" style="height:100%">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav" id="accordion">
+            <ul class="sidebar-nav" id="phb">
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="#home">
 						<h2>Naruto World</h2>
                     </a>
                 </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Attributes">Attributes</a>
-					<ul id="Attributes" class="collapse">
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Primary_Attributes">Primary Attributes</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Derived_Attributes">Derived Attributes</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Uniques">Uniques</a>
-					<ul id="Uniques" class="collapse">
-						<li><a data-toggle="collapse" data-parent="#Uniques" href="#Creation_Uniques">Creation</a></li>
-						<li><a data-toggle="collapse" data-parent="#Uniques" href="#1_Uniques">1 Point</a></li>
-						<li><a data-toggle="collapse" data-parent="#Uniques" href="#2_Uniques">2 Point</a></li>
-						<li><a data-toggle="collapse" data-parent="#Uniques" href="#3_Uniques">3 Point</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Combat">Combat</a>
-					<ul id="Combat" class="collapse">
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Overview">Overview</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Initiative">Initiative</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Actions">Actions</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Adv_Actions">Actions (Advanced)</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Fatigue">Fatigue</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Conditions">Conditions</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Status">Status Effects</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Weather">Weather Conditions</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Wounds">Wounds</a></li>
-						<li><a data-toggle="collapse" data-parent="#Combat" href="#Combat_Other">Recovery</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Stealth">Stealth</a>
-					<ul id="Stealth" class="collapse">
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Stealth_Stealth">Stealth</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Stealth_Persuit">Persuit</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Skills">Skills</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Abilities">Abilities</a>
-					<ul id="Abilities" class="collapse">
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Physical">Physical</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Subtlety">Subtlety</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Sensory">Sensory</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Chakra">Chakra</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Advanced">Advanced</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Genjutsu">Genjutsu</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Equipment">Equipment</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Other">Other</a></li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Abilities_Development">Development</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Jutsu">Jutsu</a>
-					<ul id="Jutsu" class="collapse">
-						<li>
-							<a data-toggle="collapse" data-parent="#Jutsu" href="#Taijutsu">Taijutsu</a>
-							<ul id="Taijutsu" class="collapse">
-								<li>
-									<a data-toggle="collapse" data-parent="#Taijutsu" href="#Taijutsu_Regular">Regular</a>
-									<ul id="Taijutsu_Regular" class="collapse">
-										<li><a data-toggle="collapse" data-parent="#Taijutsu_Regular" href="#Taijutsu_Regular_e">E</a></li>
-										<li><a data-toggle="collapse" data-parent="#Taijutsu_Regular" href="#Taijutsu_Regular_d">D</a></li>
-										<li><a data-toggle="collapse" data-parent="#Taijutsu_Regular" href="#Taijutsu_Regular_c">C</a></li>
-										<li><a data-toggle="collapse" data-parent="#Taijutsu_Regular" href="#Taijutsu_Regular_b">B</a></li>
-										<li><a data-toggle="collapse" data-parent="#Taijutsu_Regular" href="#Taijutsu_Regular_a">A</a></li>
-									</ul>
-								</li>
-								<li>
-									<a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo">Combo</a>
-									<ul id="Taijutsu_Combo" class="collapse">
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_e">E</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_d">D</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_c">C</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_b">B</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_a">A</a></li>
-									</ul>
-								</li>
-								<li>
-									<a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Weapon">Weapon</a>
-									<ul id="Taijutsu_Weapon" class="collapse">
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Weapon_e">E</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Weapon_d">D</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Weapon_c">C</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Weapon_b">B</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Weapon_a">A</a></li>
-									</ul>
-								</li>
-								<li>
-									<a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Grapple">Grapple</a>
-									<ul id="Taijutsu_Grapple" class="collapse">
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Grapple_e">E</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Grapple_d">D</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Grapple_c">C</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Grapple_b">B</a></li>
-										<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Grapple_a">A</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a data-toggle="collapse" data-parent="#accordion" href="#Ninjutsu">Ninjutsu</a>
-							<ul id="Ninjutsu" class="collapse">
-								<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_e">E</a></li>
-								<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_d">D</a></li>
-								<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_c">C</a></li>
-								<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_b">B</a></li>
-								<li><a data-toggle="collapse" data-parent="#accordion" href="#Taijutsu_Combo_a">A</a></li>
-							</ul>
-						</li>
-						<li><a data-toggle="collapse" data-parent="#accordion" href="#Genjutsu">Genjutsu</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Villages">Villages</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Equipment">Equipment</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Advancement">Advancement</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Talents">Talents</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#Summoning_Contracts">Summoning Contracts</a>
-                </li>
-				
-            </ul>
+				<!-- Menu inserted here -->
+			</ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
-        <!-- Page Content -->
+		<!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid" id ="pageContent">
-                <h1>Simple Sidebar</h1>
-                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
             </div>
         </div>
@@ -177,21 +43,93 @@
 
     </div>
     <!-- /#wrapper -->
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+		
+	<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	
+<script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#wrapper").toggleClass("toggled");
+	$(function(){
+        $("a").click(function (e) { 
+            e.preventDefault();
+			console.log("loading " + $(this).attr("href").replace("#phb_", ""));
+            $("#pageContent").load("pages/" + $(this).attr("href").replace("#", "").replace("phb_", ""));
+        });
+    });
+	
+	$("#pageContent").load("pages/home.html");
+	
+	var data = {
+		menu: 
+		[
+			{name: 'Attributes', sub: 
+				[
+				   {name: 'Primary'},
+				   {name: 'Derived'}
+				]
+			},
+			{name: 'Uniques', sub: 
+				[
+				   {name: 'Creation'},
+				   {name: '1 Point'},
+				   {name: '2 Point'},
+				   {name: '3 Point'}
+				]
+			},
+			{name: 'Combat', sub: 
+				[
+				   {name: 'Overview'},
+				   {name: 'Initiative'},
+				   {name: 'Actions'},
+				   {name: 'Advanced Actions'},
+				   {name: 'Fatigue'},
+				   {name: 'Conditions'},
+				   {name: 'Status Effects'},
+				   {name: 'Weather Conditions'},
+				   {name: 'Wounds'},
+				   {name: 'Recovery'}
+				]
+			},
+		]
+	}
+
+    var getMenuItem = function (itemData, parentName) {
+		var complexName = parentName + '_' + itemData.name.replace(/\s/g, "-") 
+        var a = $("<a>", {
+				href: '#' + complexName,
+				html: itemData.name
+			});
+		a.attr("data-toggle", "collapse");
+		a.attr("data-parent", "#"+parentName);
+
+		var item = $("<li>").append(a);
+		
+		if (itemData.sub) {
+            var subList = $('<ul>');
+			subList.attr("class", "collapse");
+			subList.attr("id", complexName);
+            $.each(itemData.sub, function () {
+                subList.append(getMenuItem(this, complexName));
+            });
+            item.append(subList);
+        }
+        return item;
+    };
+
+    var $menu = $("#phb");
+    $.each(data.menu, function () {
+        $menu.append(
+            getMenuItem(this, "phb")
+		);
+    });
+	
+	$("#wrapper").toggleClass("toggled");
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
-    </script>
-
+</script>
 </body>
-
 </html>
