@@ -54,8 +54,8 @@
 	$(function(){
         $("a").click(function (e) { 
             e.preventDefault();
-			console.log("loading " + $(this).attr("href").replace("#", ""));
-            $("#pageContent").load("pages/" + $(this).attr("href").replace("#", ""));
+			console.log("loading " + $(this).attr("href").replace("#phb_", ""));
+            $("#pageContent").load("pages/" + $(this).attr("href").replace("#", "").replace("phb_", ""));
         });
     });
 	
