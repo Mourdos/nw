@@ -55,7 +55,7 @@
         $("a").click(function (e) { 
             e.preventDefault();
 			console.log("loading " + $(this).attr("href").replace("#phb_", ""));
-            $("#pageContent").load("pages/" + $(this).attr("href").replace("#", "").replace("phb_", ""));
+            $("#pageContent").load("pages/" + $(this).attr("href").replace("#", "").replace("phb_", "")+".html");
         });
     });
 	
