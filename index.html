@@ -3,139 +3,131 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Simple Sidebar - Start Bootstrap Template</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
 
 </head>
 
 <body style="height:100vh; background-image:url(images/background.jpg); background-size: cover">
-	<div id="wrapper" style="height:100%">
-		<!-- Sidebar -->
-		<div id="sidebar-wrapper">
-			<ul class="sidebar-nav" id="phb">
-				<li class="sidebar-brand">
-					<a href="#home">
-						<h2>Naruto World</h2>
-					</a>
-				</li>
-				<!-- Menu inserted here -->
-			</ul>
-		</div>
-		<!-- /#sidebar-wrapper -->
+    <div id="wrapper" style="height:100%">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" id="phb">
+                <li class="sidebar-brand">
+                    <a href="#home">
+                        <h2>Naruto World</h2>
+                    </a>
+                </li>
+                <!-- Menu inserted here -->
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-		<!-- Page Content -->
-		<div id="page-content-wrapper">
-			<div class="container-fluid" id ="pageContent">
-				<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
-			</div>
-		</div>
-		<!-- /#page-content-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid" id ="pageContent">
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
 
-	</div>
-	<!-- /#wrapper -->
-		
-	<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/popper/popper.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	
+    </div>
+    <!-- /#wrapper -->
+        
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    
 <script>
-
-	$(function(){
-		$("a").click(function (e) { 
-			e.preventDefault();
-			console.log("loading " + $(this).attr("href").replace("#phb_", ""));
-			$("#pageContent").load("pages/" + $(this).attr("href").replace("#", "").replace("phb_", "")+".html");
-		});
-	});
-	
-	$("#pageContent").load("pages/home.html");
-	
-	var data = {
-		menu: 
-		[
-			{name: 'Attributes', sub: 
-				[
-				   {name: 'Primary'},
-				   {name: 'Derived'}
-				]
-			},
-			{name: 'Uniques', sub: 
-				[
-				   {name: 'Creation'},
-				   {name: '1 Point'},
-				   {name: '2 Point'},
-				   {name: '3 Point'}
-				]
-			},
-			{name: 'Combat', sub: 
-				[
-				   {name: 'Overview'},
-				   {name: 'Initiative'},
-				   {name: 'Actions'},
-				   {name: 'Advanced Actions'},
-				   {name: 'Fatigue'},
-				   {name: 'Conditions'},
-				   {name: 'Status Effects'},
-				   {name: 'Weather Conditions'},
-				   {name: 'Wounds', sub: 
-				[
-				   {name: 'Blunt'},
-				   {name: 'Slashing'},
-				   {name: 'Piercing'},
-				   {name: 'Energy'}
-				]},
-				   {name: 'Recovery'}
-				]
-			},
-		]
+	if (window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+        $("#pageContent").load("pages/" + hash.replace("#", "").replace("phb_", "")+".html");
+    } else {
+	    $("#pageContent").load("pages/home.html");
 	}
-
-	var getMenuItem = function (itemData, parentName) {
-		var complexName = parentName + '_' + itemData.name.replace(/\s/g, "-") 
-		var a = $("<a>", {
-				href: '#' + complexName,
-				html: itemData.name
-			});
-		a.attr("data-toggle", "collapse");
-		a.attr("data-parent", "#"+parentName);
-
-		var item = $("<li>").append(a);
-		
-		if (itemData.sub) {
-			var subList = $('<ul>');
-			subList.attr("class", "collapse");
-			subList.attr("id", complexName);
-			$.each(itemData.sub, function () {
-				subList.append(getMenuItem(this, complexName));
-			});
-			item.append(subList);
-		}
-		return item;
-	};
-
-	var $menu = $("#phb");
-	$.each(data.menu, function () {
-		$menu.append(
-			getMenuItem(this, "phb")
-		);
-	});
 	
-	$("#wrapper").toggleClass("toggled");
-	$("#menu-toggle").click(function(e) {
-		e.preventDefault();
-		$("#wrapper").toggleClass("toggled");
-	});
+    $(function(){
+        $("a").click(function (e) { 
+            e.preventDefault();
+            console.log("loading " + $(this).attr("href").replace("#phb_", ""));
+			location.hash = $(this).attr("href");
+            $("#pageContent").load("pages/" + $(this).attr("href").replace("#", "").replace("phb_", "")+".html");
+        });
+    });
+    
+    var data = {
+        menu: 
+        [
+            {name: 'Attributes', sub: 
+                [
+                   {name: 'Primary'},
+                   {name: 'Derived'}
+                ]
+            },
+            {name: 'Uniques', sub: 
+                [
+                   {name: 'Creation'},
+                   {name: '1 Point'},
+                   {name: '2 Point'},
+                   {name: '3 Point'}
+                ]
+            },
+            {name: 'Combat', sub: 
+                [
+                   {name: 'Initiative'},
+                   {name: 'Actions'},
+                   {name: 'Advanced Actions'}
+                ]
+            }
+        ]
+    }
+
+    var getMenuItem = function (itemData, parentName) {
+        var complexName = parentName + '_' + itemData.name.replace(/\s/g, "-") 
+        var a = $("<a>", {
+                href: '#' + complexName,
+                html: itemData.name
+            });
+        a.attr("data-toggle", "collapse");
+        a.attr("data-parent", "#"+parentName);
+
+        var item = $("<li>").append(a);
+        
+        if (itemData.sub) {
+            var subList = $('<ul>');
+            subList.attr("class", "collapse");
+            subList.attr("id", complexName);
+            $.each(itemData.sub, function () {
+                subList.append(getMenuItem(this, complexName));
+            });
+            item.append(subList);
+        }
+        return item;
+    };
+
+    var $menu = $("#phb");
+    $.each(data.menu, function () {
+        $menu.append(
+            getMenuItem(this, "phb")
+        );
+    });
+    
+    $("#wrapper").toggleClass("toggled");
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
 </script>
 </body>
 </html>
